@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "955649185997",
+    "project_id": "stannagocapp",
+    "storage_bucket": "stannagocapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955649185997:android:1ba920292ac44589c17184",
+        "android_client_info": {
+          "package_name": "com.example.stAnnaGOCApp.st_anna_goc_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955649185997-3pikkir06v49751qitt4mserrt1j2b9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6GyWe06DMMQreJsNP6MTCn3T7lpcWw_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955649185997-3pikkir06v49751qitt4mserrt1j2b9g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "955649185997-5psc1u684hsgc1d3pkic9hsm4fi78u78.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "cth.StAnnaGOCApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
