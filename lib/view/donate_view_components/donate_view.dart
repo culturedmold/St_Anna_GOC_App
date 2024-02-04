@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:st_anna_goc_app/view/donate_view_components/stewardship_web_view.dart';
+import 'package:st_anna_goc_app/view/web_view_components/web_view.dart';
 
 class DonateView extends StatefulWidget {
   const DonateView({super.key});
@@ -16,6 +16,8 @@ class _DonateViewState extends State<DonateView> {
   final String stewardshipSubtitle =
       "Tap to make an online stewardship payment, altar/benevolence fund contribution, or other donation.";
   final String stewardshipTitle = "Stewardship";
+  final String stewardshipUrl =
+      "https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=wWsk24ZWJSTZKsGd1RMKlg0BDvsSG3VIWQCPJNNxD8upkiY7JlDavDsozUE7KG0nFx2NSo8LdUKGuGuF396vbReVdS7jwpFaybhGQTnmuj6XHubq5Z7ap5JVmPErc4ZeYHCKCZhESjGNQmZ5B-6dx6hxWhlY3PmHrafyNj6wdeI=&ver=3";
 
   final String capitalCampaignTitle = "CapitalCampaign";
   final String capitalCampaignSubtitle =
@@ -30,8 +32,8 @@ class _DonateViewState extends State<DonateView> {
       body: Center(
         child: Column(
           children: [
-            DonateTile(title: stewardshipTitle, subtitle: stewardshipSubtitle, destinationWebView: const StewardshipWebView()),
-            DonateTile(title: capitalCampaignTitle, subtitle: capitalCampaignSubtitle, destinationWebView: const StewardshipWebView())
+            DonateTile(title: stewardshipTitle, subtitle: stewardshipSubtitle, destinationWebView: WebView(title: stewardshipTitle, destinationUrl: stewardshipUrl)),
+            DonateTile(title: capitalCampaignTitle, subtitle: capitalCampaignSubtitle, destinationWebView: WebView(title: capitalCampaignTitle, destinationUrl: capitalCampaignUrl))
           ],
         ),
       ),
@@ -58,6 +60,7 @@ class DonateTile extends StatelessWidget {
       child: Card(
         elevation: 8,
         shadowColor: Theme.of(context).primaryColor,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
         child: InkWell(
           onTap: () => {
             Navigator.push(
