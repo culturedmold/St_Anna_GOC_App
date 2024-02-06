@@ -11,7 +11,7 @@ class WebNavigationControls extends StatelessWidget {
     return Row(
       children: <Widget>[
         IconButton(
-          icon: const Icon(Icons.arrow_left),
+          icon: const Icon(Icons.arrow_back_ios),
           onPressed: () async {
             final messenger = ScaffoldMessenger.of(context);
             if (await _controller.canGoBack()) {
@@ -25,7 +25,7 @@ class WebNavigationControls extends StatelessWidget {
           },
         ),
         IconButton(
-          icon: const Icon(Icons.arrow_right),
+          icon: const Icon(Icons.arrow_forward_ios),
           onPressed: () async {
             final messenger = ScaffoldMessenger.of(context);
             if (await _controller.canGoForward()) {

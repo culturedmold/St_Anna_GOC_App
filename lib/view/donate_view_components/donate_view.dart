@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:st_anna_goc_app/main_appbar.dart';
 import 'package:st_anna_goc_app/view/web_view_components/web_view.dart';
 
 class DonateView extends StatefulWidget {
@@ -9,6 +10,8 @@ class DonateView extends StatefulWidget {
 }
 
 class _DonateViewState extends State<DonateView> {
+  final String title = "Donate";
+
   final String appBarTitle = "Donate";
   final String capitalCampaignUrl =
       "https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=wWsk24ZWJSTZKsGd1RMKlg0BDvsSG3VIWQCPJNNxD8upkiY7JlDavDsozUE7KG0nFx2NSo8LdUKGuGuF396vbcGDOPMlnzRQOAmUavFnrd-XHubq5Z7ap5JVmPErc4ZeYHCKCZhESjGNQmZ5B-6dxz8jBKZ7fzcNnOvEJiLQzQ0=&ver=3";
@@ -26,9 +29,7 @@ class _DonateViewState extends State<DonateView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(appBarTitle),
-      ),
+      appBar: const MainAppBar(title: "Donate"),
       body: Center(
         child: Column(
           children: [

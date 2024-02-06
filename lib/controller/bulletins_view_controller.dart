@@ -1,5 +1,5 @@
-import '../firebase_access/firestore_access.dart';
 import '../model/bulletin.dart';
+import '../utils/firebase_access/firestore_access.dart';
 
 class BulletinViewController {
   late List<Bulletin> bulletinsList = [];
