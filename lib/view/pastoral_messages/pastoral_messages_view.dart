@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../controller/pastoral_messages_view_controller.dart';
+import '../../controller/pastoral_messages_controller.dart';
 import 'pastoral_message_card.dart';
 
 class PastoralMessagesView extends StatefulWidget {

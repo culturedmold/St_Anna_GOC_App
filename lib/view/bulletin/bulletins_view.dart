@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:st_anna_goc_app/controller/bulletins_view_controller.dart';
+import 'package:st_anna_goc_app/controller/bulletins_controller.dart';
 import 'package:st_anna_goc_app/view/bulletin/bulletin_card.dart';
 
 class BulletinsView extends StatefulWidget {
