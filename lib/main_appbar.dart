@@ -33,7 +33,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         )
       ],
-      title: Text(title, style: const TextStyle(color: Colors.white),),
+      title: Text(title, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
       // elevation: 200,
       scrolledUnderElevation: 16,
       //surfaceTintColor: Theme.of(context).primaryColorLight,

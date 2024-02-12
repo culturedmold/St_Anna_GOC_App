@@ -6,9 +6,9 @@ import '../../main_appbar.dart';
 import 'home_card.dart';
 
 class HomeView extends StatelessWidget {
-  final String title;
+  final String title = "Home";
 
-  const HomeView({required this.title, super.key});
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {

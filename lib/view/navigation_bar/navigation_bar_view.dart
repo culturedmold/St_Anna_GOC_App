@@ -55,7 +55,7 @@ class _NavigationBarViewState extends State<NavigationBarView> {
         ),
       ),
       body: <Widget>[
-        const HomeView(title: 'St Anna GOC'),
+        const HomeView(),
         const DonateView(),
       ][_currentPageIndex],
     );
