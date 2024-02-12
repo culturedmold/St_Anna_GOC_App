@@ -9,7 +9,7 @@ class BulletinViewController {
   Future<List<Bulletin>> fetchBulletins() async {
     List<Bulletin> temp = [];
 
-      await FireStoreAccess.db.collection("BulletinLinkss").get().then((event) {
+      await FireStoreAccess.db.collection("BulletinLinks").get().then((event) {
         for (var doc in event.docs) {
           var bulletinUrl = doc["URL"];
           var bulletinDate = DateTime.parse(
