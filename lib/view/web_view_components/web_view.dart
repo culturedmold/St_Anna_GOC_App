@@ -20,6 +20,7 @@ class _WebViewState extends State<WebView> {
     _controller = WebViewController()
       ..loadRequest(Uri.parse(widget.destinationUrl))
       ..setJavaScriptMode(JavaScriptMode.unrestricted);
+
   }
 
   @override

@@ -16,6 +16,7 @@ class BulletinViewController {
               doc["bulletinDate"].toDate().toString());
 
           var bulletin = Bulletin(bulletinUrl, bulletinDate);
+          // print(bulletin.bulletinUrl);
           temp.add(bulletin);
         }
       });

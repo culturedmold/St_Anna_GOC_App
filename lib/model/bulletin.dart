@@ -1,4 +1,5 @@
 import 'package:intl/intl.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Bulletin {
   String bulletinUrl;
@@ -10,4 +11,12 @@ class Bulletin {
   }
 
   Bulletin(this.bulletinUrl, this.bulletinDate);
+
+  void openBulletinLink() async {
+    if (await canLaunchUrl(Uri.parse(bulletinUrl))) {
+      await launchUrl(Uri.parse(bulletinUrl), mode: LaunchMode.externalApplication);
+    } else {
+      throw "Error downloading bulletin";
+    }
+  }
 }

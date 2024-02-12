@@ -31,7 +31,7 @@ class BulletinCard extends StatelessWidget {
                 margin: const EdgeInsets.all(8.0),
                 child: FilledButton (
                     onPressed: () =>
-                        {},
+                        bulletin.openBulletinLink(),
                     child: const Icon(Icons.read_more))
             )
           ],
