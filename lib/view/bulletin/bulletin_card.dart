@@ -27,12 +27,12 @@ class BulletinCard extends StatelessWidget {
             ),
 
             // const Spacer(),
-            Container(
-                margin: const EdgeInsets.all(8.0),
+            Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: FilledButton (
                     onPressed: () =>
                         bulletin.openBulletinLink(),
-                    child: const Icon(Icons.read_more))
+                    child: const Icon(Icons.open_in_browser))
             )
           ],
         ),

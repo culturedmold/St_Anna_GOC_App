@@ -15,44 +15,36 @@ class _NavigationBarViewState extends State<NavigationBarView> {
 
   @override
   Widget build(BuildContext context) {
+    Color iconColor = Theme.of(context).primaryColor;
     // final ThemeData theme = Theme.of(context);
     return Scaffold(
-      bottomNavigationBar: NavigationBarTheme(
-        data: NavigationBarThemeData(
-          labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>(
-        (Set<MaterialState> states) {
-          return const TextStyle(color: Colors.white);
-          }
-          )
-        ),
-        child: NavigationBar(
-          selectedIndex: _currentPageIndex,
-          //elevation: 160,
-          backgroundColor: Theme.of(context).primaryColor,
-          onDestinationSelected: (int index) {
-            setState(() {
-              _currentPageIndex = index;
-            });
-          },
-          //selectedIndex: currentPageIndex,
-          indicatorColor: Theme.of(context).highlightColor,
-          labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _currentPageIndex,
+        //elevation: 160,
+        //backgroundColor: Theme.of(context).primaryColor,
+        onDestinationSelected: (int index) {
+          setState(() {
+            _currentPageIndex = index;
+          });
+        },
+        //selectedIndex: currentPageIndex,
+        indicatorColor: Theme.of(context).highlightColor,
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
 
-          destinations: const <Widget>[
-            NavigationDestination(
-                icon: Icon(Icons.home, color: Colors.white,),
-                label: "Home",
-            ),
-            NavigationDestination(
-                icon: Icon(Icons.favorite, color: Colors.white),
-                label: "Donate"
-            ),
-            NavigationDestination(
-                icon: Icon(Icons.question_mark, color: Colors.white),
-                label: "About"
-            ),
-          ],
-        ),
+        destinations: <Widget>[
+          NavigationDestination(
+              icon: Icon(Icons.home, color: iconColor),
+              label: "Home",
+          ),
+          NavigationDestination(
+              icon: Icon(Icons.favorite, color: iconColor),
+              label: "Donate"
+          ),
+          NavigationDestination(
+              icon: Icon(Icons.question_mark, color: iconColor),
+              label: "About"
+          ),
+        ],
       ),
       body: <Widget>[
         const HomeView(),

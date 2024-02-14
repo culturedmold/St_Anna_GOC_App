@@ -12,11 +12,11 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Theme.of(context).primaryColor,
+      //backgroundColor: Theme.of(context).primaryColor,
       actions: [
         Padding(
           padding: const EdgeInsets.only(left: 8, right: 8),
-          child: FilledButton.tonal(onPressed: () async {
+          child: OutlinedButton(onPressed: () async {
             var uri = Uri.parse('tel:18013582148');
             if (await canLaunchUrl(uri)) {
               await launchUrl(uri);
@@ -33,7 +33,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         )
       ],
-      title: Text(title, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+      title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
       // elevation: 200,
       scrolledUnderElevation: 16,
       //surfaceTintColor: Theme.of(context).primaryColorLight,
