@@ -21,7 +21,7 @@ class PastoralMessageDetailView extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Flexible(child: Text(pastoralMessage.messageTitle, style: const TextStyle(fontSize: 24)))
+          child: Text(pastoralMessage.messageTitle, style: const TextStyle(fontSize: 24))
         ),
         Padding(
             padding: const EdgeInsets.all(8.0),
